@@ -41,7 +41,7 @@
 
 		let menuawal = 0;
 		while (menuawal != 3) {
-			let menuawal = prompt(`
+			menuawal = prompt(`
 		      1. List Barang
 		      2. Keranjang
 		      3. Exit`);
@@ -72,7 +72,8 @@
 					alert("Masukkan 1-4");
 				}
 			} else if (menuawal == 2) {
-				alert("menu 2");
+				// prompt(keranjang);
+				console.log(keranjang);
 			} else if (menuawal == 3) {
 				console.log("Terima Kasih Sudah Berbelanja");
 			} else {
