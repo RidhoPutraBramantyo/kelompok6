@@ -37,6 +37,7 @@
 				element.harga.toLocaleString("id-ID") +
 				"\n";
 		});
+
 		let keranjang = [];
 
 		let menuawal = 0;
@@ -72,8 +73,28 @@
 					alert("Masukkan 1-4");
 				}
 			} else if (menuawal == 2) {
-				// prompt(keranjang);
-				console.log(keranjang);
+				let listkeranjang = "";
+
+				keranjang.forEach((element, index) => {
+					listkeranjang +=
+						index +
+						1 +
+						". " +
+						element.nama +
+						", Kuantiti: " +
+						element.qty +
+						", Harga @ Rp. " +
+						element.harga.toLocaleString("id-ID") +
+						"\n";
+				});
+
+				let edit = prompt(
+					"Keranjang Belanja" +
+						"\n" +
+						listkeranjang +
+						"\n" +
+						"Pilih Nomor untuk Edit/Hapus atau Checkout untuk Bayar"
+				);
 			} else if (menuawal == 3) {
 				console.log("Terima Kasih Sudah Berbelanja");
 			} else {
